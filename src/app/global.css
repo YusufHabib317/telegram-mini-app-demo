@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: var(--app-bg-color);
+  color: var(--app-text-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.mantine-Paper-root {
+  background-color: var(--app-bg-color) !important;
+  color: var(--app-text-color) !important;
+}
+
+.mantine-Modal-content {
+  background-color: var(--app-bg-color) !important;
+  color: var(--app-text-color) !important;
+}
+
+.mantine-Modal-header {
+  background-color: var(--app-bg-color) !important;
+  color: var(--app-text-color) !important;
+}
+
+.mantine-Text-root {
+  color: var(--app-text-color) !important;
+}
