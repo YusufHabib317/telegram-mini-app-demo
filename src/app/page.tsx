@@ -13,52 +13,14 @@ import {
 } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
 import {
-  IconCheck, IconClock, IconDots, IconFlag, IconPencil,
+  IconCheck, IconClock, IconDots, IconPencil,
   IconTrash,
 } from '@tabler/icons-react';
 import { useTelegram } from '@/hooks/use-telegram';
 import { useMounted } from '@mantine/hooks';
 import { useLocalStorage } from '@/hooks/use-local-storage';
 import { Task, TaskPriority } from '@/types/task';
-
-export const PRIORITY_DATA = [
-  {
-    value: 'low',
-    label: 'Low Priority',
-    color: 'green',
-    description: 'Can be done when convenient',
-    icon: IconFlag,
-    styles: {
-      backgroundColor: 'var(--mantine-color-green-1)',
-      hoverColor: 'var(--mantine-color-green-2)',
-      selectedColor: 'var(--mantine-color-green-6)',
-    },
-  },
-  {
-    value: 'medium',
-    label: 'Medium Priority',
-    color: 'yellow',
-    description: 'Should be done soon',
-    icon: IconFlag,
-    styles: {
-      backgroundColor: 'var(--mantine-color-yellow-1)',
-      hoverColor: 'var(--mantine-color-yellow-2)',
-      selectedColor: 'var(--mantine-color-yellow-6)',
-    },
-  },
-  {
-    value: 'high',
-    label: 'High Priority',
-    color: 'red',
-    description: 'Needs immediate attention',
-    icon: IconFlag,
-    styles: {
-      backgroundColor: 'var(--mantine-color-red-1)',
-      hoverColor: 'var(--mantine-color-red-2)',
-      selectedColor: 'var(--mantine-color-red-6)',
-    },
-  },
-] as const;
+import { PRIORITY_DATA } from '@/constant';
 
 export default function HomePage() {
   const { webapp, isReady, showAlert } = useTelegram();
